@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router';
 import { Link,BrowserRouter } from 'react-router-dom';
-import './util/'
 class App extends Component {
   render() {
     // return (
@@ -42,6 +41,7 @@ const Template = ({ title }) => (
     <p className="page-info">
       This is the {title} page.
     </p>
+    <p>{'Rendered at '+new Date()}</p>
   </div>
 );
 
