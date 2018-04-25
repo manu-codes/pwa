@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router';
 import { Link, BrowserRouter } from 'react-router-dom';
+import Calculator from './calc/index';
 class App extends Component {
   render() {
+    
     return (
       <BrowserRouter>
         <div>
@@ -42,7 +44,7 @@ const Feed = (props) => (
   <Template title="Feed" />
 );
 const Profile = (props) => (
-  <Template title="Profile" />
+  <Calculator/>
 );
 
 export default App;
