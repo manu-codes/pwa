@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route } from 'react-router';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { Route, } from 'react-router';
+import {  BrowserRouter  } from 'react-router-dom';
 import Calculator from './calc/index';
 import Container from './container-ui/index'
+import About from './about'
 class App extends Component {
   render() {
 
     return (
       <BrowserRouter>
         <div>
-          <Route path='/' exact={true} component={Feed} />
-          <Route path='/profile' component={Profile} />
+          <Route path='/' exact={true} component={Home} />
+          <Route path='/Calculator' component={Calc} />
+          <Route path='/About' component={AboutComp} />
+          
         </div>
 
       </BrowserRouter>
@@ -19,34 +22,28 @@ class App extends Component {
   }
 }
 
+const links = [{path:'/',name:'Home'},
+{path:'/Calculator',name:'Calculator'},
+{path:'/About',name:'About Cafe Works'}
 
-const NavBar = () => {
-  let ls = [];
-ls.push(<Link className='listItem' to="/">Feed</Link>)
-ls.push(<Link className='listItem' to="/profile">Profile</Link>);
-return ls;
-  
-};
+]
 
-// const Template = ({ title }) => (
-//   <div>
-//     <NavBar />
-//     <p className="page-info">
-//       This is the {title} page.
-//     </p>
-//     <p>{'created at ' + new Date()}</p>
-//   </div>
-// );
-
-const Feed = (props) => (
-  <Container links={NavBar()}>
+const Home = (props) => (
+  <Container links={links}>
     <Calculator />
   </Container>
 );
-const Profile = (props) => (
+const Calc = (props) => (
 
-  <Container links={NavBar()}>
+  <Container links={links}>
     <Calculator />
+  </Container>
+
+);
+const AboutComp = (props) => (
+
+  <Container links={links}>
+    <About />
   </Container>
 
 );
