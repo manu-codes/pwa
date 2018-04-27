@@ -6,9 +6,20 @@ import registerServiceWorker from './registerServiceWorker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import * as Colors from 'material-ui/styles/colors';
-import { fade } from 'material-ui/utils/colorManipulator'
+// import { fade } from 'material-ui/utils/colorManipulator'
 const muiTheme = getMuiTheme({
-  "palette":{ "primary1Color": Colors.brown800,
+  "palette": {
+    "primary1Color": Colors.lime900,
+    "accent1Color": Colors.lime800,
+    "canvasColor": Colors.lime50
+  }
+
+});
+
+/*
+
+
+"palette":{ "primary1Color": Colors.brown800,
         "primary2Color": Colors.brown700,
         "primary3Color": Colors.grey800,
         "accent1Color": Colors.brown400,
@@ -17,12 +28,13 @@ const muiTheme = getMuiTheme({
         "alternateTextColor": fade(Colors.darkWhite, 0.87),
         "canvasColor": Colors.brown500,
 }
-});
+
+*/
 const Application = () => (
-    <MuiThemeProvider muiTheme={muiTheme}>
-      <App />
-    </MuiThemeProvider>
-  );
+  <MuiThemeProvider muiTheme={muiTheme}>
+    <App />
+  </MuiThemeProvider>
+);
 
 ReactDOM.render(<Application />, document.getElementById('root'));
 registerServiceWorker();
