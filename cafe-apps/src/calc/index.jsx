@@ -14,7 +14,7 @@ class Calculator extends React.Component {
     }
 
     render() {
-        const { text } = this.state;
+        //const { text } = this.state;
         return <Card style={{ height: '100%' }}>
             <CardHeader
                 title="Calculator"
@@ -29,28 +29,90 @@ class Calculator extends React.Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col className='col-xs-4 '>
-                            <RaisedButton secondary={true} label='7' fullWidth />
+                        <Col className='col-xs-3 '>
+                            <RaisedButton primary={true} label='AC' fullWidth />
                         </Col>
-                        <Col className='col-xs-4'>
+                        <Col className='col-xs-3'>
 
-                            <RaisedButton secondary={true} label='8' fullWidth />
+                            <RaisedButton secondary={true} label='C' fullWidth />
                         </Col>
-                        <Col className='col-xs-4'>
-                            <RaisedButton secondary={true} label='9' fullWidth />
+                        <Col className='col-xs-3'>
+                            <RaisedButton secondary={true} label='/' fullWidth />
+                        </Col>
+                        <Col className='col-xs-3'>
+                            <RaisedButton secondary={true} label='X' fullWidth />
                         </Col>
                     </Row>
                     <Row>
-                        <Col className='col-xs-4 '>
-                            <RaisedButton secondary={true} label='4' fullWidth />
+                        <Col className='col-xs-3 '>
+                            <RaisedButton secondary={true} label='7' fullWidth />
                         </Col>
-                        <Col className='col-xs-4'>
-                            <RaisedButton secondary={true} label='5' fullWidth />
+                        <Col className='col-xs-3'>
+
+                            <RaisedButton secondary={true} label='8' fullWidth />
                         </Col>
-                        <Col className='col-xs-4'>
-                            <RaisedButton secondary={true} label='6' fullWidth />
+                        <Col className='col-xs-3'>
+                            <RaisedButton secondary={true} label='9' fullWidth />
+                        </Col>
+                        <Col className='col-xs-3'>
+                            <RaisedButton secondary={true} label='-' fullWidth />
                         </Col>
                     </Row>
+                    <Row>
+                        <Col className='col-xs-3 '>
+                            <RaisedButton secondary={true} label='4' fullWidth />
+                        </Col>
+                        <Col className='col-xs-3'>
+                            <RaisedButton secondary={true} label='5' fullWidth />
+                        </Col>
+                        <Col className='col-xs-3'>
+                            <RaisedButton secondary={true} label='6' fullWidth />
+                        </Col>
+                        <Col className='col-xs-3'>
+                            <RaisedButton secondary={true} label='+' fullWidth />
+                        </Col>
+                    </Row>
+
+
+                    <Row>
+                        <Col className='col-xs-12 ' nopad>
+                        <Row>
+                            <Col className='col-xs-3 '>
+                                <RaisedButton secondary={true} label='1' fullWidth />
+                            </Col>
+                            <Col className='col-xs-3'>
+                                <RaisedButton secondary={true} label='2' fullWidth />
+                            </Col>
+                            <Col className='col-xs-3'>
+                                <RaisedButton secondary={true} label='3' fullWidth />
+                            </Col>
+                            </Row>
+                        </Col>
+                        <Col className='col-xs-12 ' nopad>
+                        <Row>
+                            <Col className='col-xs-3 '>
+                                <RaisedButton secondary={true} label='%' fullWidth />
+                            </Col>
+                            <Col className='col-xs-3'>
+                                <RaisedButton secondary={true} label='0' fullWidth />
+                            </Col>
+                            <Col className='col-xs-3'>
+                                <RaisedButton secondary={true} label='.' fullWidth />
+                            </Col>
+
+                        </Row>
+                        </Col>
+                        {/* <Col className='col-xs-3 ' style={{ height: '100%' }}>
+                            <RaisedButton secondary={true} label='=' fullWidth />
+                        </Col> */}
+                    </Row>
+
+
+
+
+
+
+
                 </Container>
             </CardActions>
         </Card>
